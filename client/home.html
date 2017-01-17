@@ -1,0 +1,41 @@
+
+<div ng-controller="AppCtrl" layout="column" style="height:600px" ng-cloak>
+
+  <md-toolbar md-scroll-shrink ng-if="true" ng-controller="TitleController">
+    <div class="md-toolbar-tools">
+    <img class='scpic' src='http://static.stereogum.com/uploads/2016/03/SoundCloud-640x266.png' />
+      <h3 class='tbTitle'>
+        {{title}}
+      </h3>
+      <md-button class="md-fab md-mini" aria-label="Favorite">
+          <md-icon md-svg-icon="./images/pup"></md-icon>
+      </md-button>
+      <md-button class="md-raised" aria-label="Learn More">
+          Profile
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <md-content >
+
+    <md-list class='rowlist'>
+
+      <md-list-item class="md-3-line" ng-repeat="item in todos">
+        <img ng-src="{{item.face}}" alt="{{item.who}}" class="md-avatar">
+
+        <div class="md-list-item-text">
+          <h3>{{item.what}}</h3>
+          <h4>{{item.who}}</h4>
+
+          <p>
+            {{item.notes}}
+          </p>
+        </div>
+        <md-divider></md-divider>
+      </md-list-item>
+
+    </md-list>
+
+  </md-content>
+
+</div>

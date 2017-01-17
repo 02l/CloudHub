@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+
+
+.md-toolbar-tools {
+    background-color: orangered;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.rowlist {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
+.scpic {
+    height: 45px;
+}
+
+.tbTitle {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.md-raised {
+    margin-left: auto;
+}
+
+.md-fab {
+    margin-left: auto;
+}
