@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngRoute', 'ngMaterial'])
+var app = angular.module('app', ['ngRoute', 'ngMaterial', 'ngMessages'])
 
     .config(function($routeProvider, $locationProvider) {
         $routeProvider
@@ -9,24 +9,37 @@ var app = angular.module('app', ['ngRoute', 'ngMaterial'])
             .otherwise( { redirectTo: '/' } )
     })
 
-    .controller('TitleController', function($scope) {
-        $scope.title = 'CloudHub';
-    })
-
-    .controller('AppCtrl', function($scope) {
+    app.controller('AppCtrl', function($scope) {
         var imagePath = 'img/list/60.jpeg';
 
-        $scope.todos = [];
-        for (var i = 0; i < 15; i++) {
-            $scope.todos.push({
-            face: imagePath,
-            what: "Brunch this weekend?",
-            who: "Min Li Chan",
-            notes: "I'll be in your neighborhood doing errands."
-            });
+        var submitToDb = function() {
+
+        }
+
+        $scope.listData = function() {
+            $scope.todos = [];
+            for (var i = 0; i < 15; i++) {
+                $scope.todos.push({
+                face: imagePath,
+                what: "Brunch this weekend?",
+                who: "Min Li Chan",
+                notes: "I'll be in your neighborhood doing errands."
+                });
+            }
+        }
+
+
+
+        $scope.project = {
+            description: '',
+            rate: ''
         }
     });
 
     app.controller ('indexController', function() {
 
+    })
+
+    app.factory('dataSend', function($http) {
+        
     })
